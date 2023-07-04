@@ -7,8 +7,10 @@ function financial(x) {
 var btn_player_num = document.getElementById('button');
 //var player_name = document.getElementById('player_name')
 btn_player_num.addEventListener('click', function(){
-    var player_name = document.getElementById('player_num');
-    name_box();
+    var player_num = document.getElementById('player_num');
+    var num = player_num.value;
+    name_box(Number(num));
+
 });
 
 function name_box(num){
@@ -96,26 +98,7 @@ function creating_table(num, names){
     //tbody
     for(var i=0;i<num;i++){
         var tr = document.createElement('tr');
-        //１行追加
-        
-    tbody.appendChild(tr);
-    }
-    table.appendChild(tbody);
-    document.getElementById('table').append(table);
-
-    var undo_btn = document.getElementById('undo');
-    undo_btn.addEventListener('click', function(){
-        var i = command[command.length-1][0];
-        var j = command[command.length-1][1];
-        x = Number(btns[i][j].innerHTML);
-        x -= 1;
-        btns[i][j].innerHTML = x;
-        btn[i][j] = x;
-        command.pop();
-    });
-}
-
-function add_row(name){
+        for(var j=0;j<list.length+2;j++){
             var th = document.createElement('th');
             //Create btn
             if(j!=0 & j!=10){
@@ -143,4 +126,19 @@ function add_row(name){
             
             tr.appendChild(th);
         }
+    tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    document.getElementById('table').append(table);
+
+    var undo_btn = document.getElementById('undo');
+    undo_btn.addEventListener('click', function(){
+        var i = command[command.length-1][0];
+        var j = command[command.length-1][1];
+        x = Number(btns[i][j].innerHTML);
+        x -= 1;
+        btns[i][j].innerHTML = x;
+        btn[i][j] = x;
+        command.pop();
+    });
 }
