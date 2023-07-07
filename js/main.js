@@ -201,7 +201,7 @@ function creating_new_table(new_list){
     thead.appendChild(tr);
 
     //2
-    var list = ['打数','SA','効果','ミス','効果率','ミス率','打数','決定','ミス','被B(ラリー)','被B(失点)','決定率','ミス率','本数','A','B','C','D','成功率','ラリー','得点'];
+    var list = ['打数','SA','効果','ミス','効果率','ミス率','打数','決定','ミス','B(続)','B(失)','決定率','ミス率','本数','A','B','C','D','成功率','続','得'];
     var tr = document.createElement('tr');
     for(var i=0;i<list.length;i++){
         var th = document.createElement('th');
@@ -224,5 +224,5 @@ function creating_new_table(new_list){
         tbody.appendChild(tr);
     }
     table.appendChild(tbody);
-    document.getElementById('body').append(table);
+    document.getElementById('aite').append(table);
 }
