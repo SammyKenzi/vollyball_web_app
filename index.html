@@ -6,55 +6,12 @@
         <title>個人別試合成績</title>
         <link rel="stylesheet" href="./css/main.css">
     </head>
-    <body id="body">
-        <p id="aite">対戦相手:<input type="text">　　自<input type="text" > - <input type="text">敵</p>
-        <p id="player">メンバー追加:<input type="text" id="player_into"> <button id="button">決定</button></p>
-
-        <table id="table">
-            <tr>
-                <th rowspan="2">名前</th>
-                <th colspan="4">サーブ</th>
-                <th colspan="5">スパイク</th>
-                <th rowspan="2">名前</th>
-                <th colspan="5">レセプション</th>
-                <th colspan="2">ブロック</th>
-            </tr>
-            <tr>
-                <th>打数</th>
-                <th>SA</th>
-                <th>効果</th>
-                <th>ミス</th>
-                <th>打数</th>
-                <th>決定</th>
-                <th>ミス</th>
-                <th>B(続)</th>
-                <th>B(失)</th>
-                <th>本数</th>
-                <th>A</th>
-                <th>B</th>
-                <th>C</th>
-                <th>D</th>
-                <th>続</th>
-                <th>得</th>
-            </tr>
-        </table>
-
-        <div>
-            <div class="undo"><button id="undo">１つ戻る</button></div>
-            <div class="fin"><button id="fin">入力確定</button></div>
-        </div>
-        
-        <br><br>
-        <p id="plus">※補足<br>
-           B(続)：失点はしていないけどブロックされた本数<br>
-           B(失)：ブロックされて失点した本数<br>
-           続   ：得点はしてないけどブロックした本数<br>
-           得   ：ブロックで得点した本数
-        </p>
+    <body>
+        <p>スコア表を選択</p>
+        <a href="input_style.html">・入力方式（数値を入力してスコア表を作成）</a><br>
+        <a href="button_style.html">・ボタン方式（リアルタイムでスコア表を作成）</a>
     </body>
 
     <footer>
-        <script src="./js/main.js"></script>
     </footer>
 </html>
-
